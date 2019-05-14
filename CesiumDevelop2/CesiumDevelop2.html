@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cesiumjs.org/releases/1.57/Build/Cesium/Cesium.js"></script>
+		<link href="https://cesiumjs.org/releases/1.57/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="cesiumContainer" style="width: 700px; height:400px"></div>
+		<script>
+			Cesium.Ion.defaultAccessToken =
+				'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlN2I5NDk4ZC1lNGI5LTQ4NzgtODI2MC0wN2YyNGE4ODRkMzciLCJpZCI6MTA4ODMsInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1NTc3MDY5MDl9.7ZFN-GQD0V7XMOJ7iyyI2YqYLKknvTo7iYtZ4nHUa84';
+			var viewer = new Cesium.Viewer('cesiumContainer', {
+				terrainProvider: Cesium.createWorldTerrain()
+			});
+
+			var HubeiUniversity = viewer.entities.add({
+				position: Cesium.Cartesian3.fromDegrees(114.33, 30.58),
+				billboard: {
+					image: './img/hubu_logo.png',
+					width: 150,
+					height: 40
+				},
+			});
+
+			viewer.zoomTo(HubeiUniversity);
+		</script>
+	</body>
+</html>
