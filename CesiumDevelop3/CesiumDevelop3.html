@@ -17,7 +17,7 @@
 				clampToGround: true
 			};
 
-			var dataPromise = Cesium.GeoJsonDataSource.load('./xjp.json', geojsonOptions);
+			var dataPromise = Cesium.GeoJsonDataSource.load('https://liguiye.github.io/Cesium-Develop/CesiumDevelop3/xjp.json', geojsonOptions);
 
 			dataPromise.then(function(dataSource) {
 				// Add the new data as entities to the viewer
